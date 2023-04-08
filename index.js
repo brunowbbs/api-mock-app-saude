@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
-const { authorization } = require("./services/authorization");
+// const { authorization } = require("./services/authorization");
 
 const TOKEN = "eccd804f-9eea-43c9-8950-6e12073eccf0";
 
