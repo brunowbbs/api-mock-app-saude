@@ -49,11 +49,13 @@ server.post("/auth", async (req, res) => {
       .json({ message: "Email and password values are required" });
   }
 
-  if (email === "teste@teste.com" && password === "123456") {
+  if (email === "admin@admin.com" && password === "123456") {
     return res.status(200).json({
       name: "Jhon Doe",
       email,
       token,
+      picture:
+        "https://igd-wp-uploads-pluginaws.s3.amazonaws.com/wp-content/uploads/2016/05/30105213/Qual-e%CC%81-o-Perfil-do-Empreendedor.jpg",
     });
   }
 
