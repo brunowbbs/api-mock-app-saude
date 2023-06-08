@@ -85,7 +85,7 @@ server.get("/activities", authorization, async (req, res) => {
 
   setTimeout(() => {
     return res.json(activities);
-  }, 5000);
+  }, 2500);
 });
 
 server.get("/my-cards", authorization, async (req, res) => {
@@ -114,7 +114,7 @@ server.get("/my-cards", authorization, async (req, res) => {
 
   setTimeout(() => {
     return res.json(userCards);
-  }, 5000);
+  }, 2500);
 });
 
 server.get("/favorites", authorization, async (req, res) => {
@@ -168,7 +168,7 @@ server.get("/favorites", authorization, async (req, res) => {
 
   setTimeout(() => {
     return res.json(favorites);
-  }, 5000);
+  }, 2500);
 });
 
 server.listen(PORT, () =>
