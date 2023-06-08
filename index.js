@@ -67,7 +67,7 @@ server.get("/activities", authorization, async (req, res) => {
   const activities = [
     {
       id: 1,
-      title: "Nova consulta adicionadad",
+      title: "Nova consulta adicionada",
       description: "2 horas atrás",
     },
     {
@@ -82,7 +82,9 @@ server.get("/activities", authorization, async (req, res) => {
     },
   ];
 
-  return res.json(activities);
+  setTimeout(() => {
+    return res.json(activities);
+  }, 5000);
 });
 
 server.listen(PORT, () =>
