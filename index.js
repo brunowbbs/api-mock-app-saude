@@ -104,6 +104,36 @@ server.get("/favorites", authorization, async (req, res) => {
       title: "Histórico",
       icon: "",
     },
+    {
+      id: 4,
+      title: "Prontuários",
+      icon: "",
+    },
+    {
+      id: 5,
+      title: "Exames",
+      icon: "",
+    },
+    {
+      id: 6,
+      title: "Histórico",
+      icon: "",
+    },
+    {
+      id: 7,
+      title: "Histórico",
+      icon: "",
+    },
+    {
+      id: 8,
+      title: "Histórico",
+      icon: "",
+    },
+    {
+      id: 9,
+      title: "Histórico",
+      icon: "",
+    },
   ];
 
   setTimeout(() => {
