@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
+const { authorization } = require("./services/authorization");
 // const { authorization } = require("./services/authorization");
 
 const TOKEN = "eccd804f-9eea-43c9-8950-6e12073eccf0";
@@ -60,6 +61,28 @@ server.post("/auth", async (req, res) => {
   }
 
   return res.status(400).json({ message: "Invalid email or password" });
+});
+
+server.post("/activities", authorization, async (req, res) => {
+  const activities = [
+    {
+      id: 1,
+      title: "Nova consulta adicionadad",
+      description: "2 horas atrás",
+    },
+    {
+      id: 2,
+      title: "Google Drive",
+      description: "Yesterday",
+    },
+    {
+      id: 3,
+      title: "Resultado disponível",
+      description: "1 Semana atrás",
+    },
+  ];
+
+  return res.json(activities);
 });
 
 server.listen(PORT, () =>
