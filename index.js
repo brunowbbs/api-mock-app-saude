@@ -138,7 +138,7 @@ server.get("/favorites", authorization, async (req, res) => {
 
   setTimeout(() => {
     return res.json(favorites);
-  }, 5000);
+  }, 3000);
 });
 
 server.listen(PORT, () =>
