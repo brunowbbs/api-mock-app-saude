@@ -87,6 +87,30 @@ server.get("/activities", authorization, async (req, res) => {
   }, 5000);
 });
 
+server.get("/favorites", authorization, async (req, res) => {
+  const favorites = [
+    {
+      id: 1,
+      title: "Prontuários",
+      icon: "",
+    },
+    {
+      id: 2,
+      title: "Exames",
+      icon: "",
+    },
+    {
+      id: 3,
+      title: "Histórico",
+      icon: "",
+    },
+  ];
+
+  setTimeout(() => {
+    return res.json(favorites);
+  }, 5000);
+});
+
 server.listen(PORT, () =>
   console.log("Servidor iniciado em http://localhost:" + PORT)
 );
