@@ -63,7 +63,7 @@ server.post("/auth", async (req, res) => {
   return res.status(400).json({ message: "Invalid email or password" });
 });
 
-server.post("/activities", authorization, async (req, res) => {
+server.get("/activities", authorization, async (req, res) => {
   const activities = [
     {
       id: 1,
