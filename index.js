@@ -88,6 +88,35 @@ server.get("/activities", authorization, async (req, res) => {
   }, 5000);
 });
 
+server.get("/my-cards", authorization, async (req, res) => {
+  const userCards = [
+    {
+      type: "visa",
+      number: "4*** **** ****4 2708",
+      title: "Visa",
+    },
+    {
+      type: "visa",
+      number: "4*** **** ****4 2708",
+      title: "Visa",
+    },
+    {
+      type: "visa",
+      number: "4*** **** ****4 2708",
+      title: "Visa",
+    },
+    {
+      type: "mastercard",
+      number: "5*** **** ****2 5236",
+      title: "MasterCard",
+    },
+  ];
+
+  setTimeout(() => {
+    return res.json(userCards);
+  }, 5000);
+});
+
 server.get("/favorites", authorization, async (req, res) => {
   const favorites = [
     {
