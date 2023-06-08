@@ -55,6 +55,7 @@ server.post("/auth", async (req, res) => {
       name: "Jhon Doe",
       email,
       token,
+      phone: "+55 21 99999-9999",
       picture:
         "https://igd-wp-uploads-pluginaws.s3.amazonaws.com/wp-content/uploads/2016/05/30105213/Qual-e%CC%81-o-Perfil-do-Empreendedor.jpg",
     });
