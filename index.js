@@ -64,6 +64,36 @@ server.post("/auth", async (req, res) => {
   return res.status(400).json({ message: "Invalid email or password" });
 });
 
+server.post("/register", async (req, res) => {
+  const { email, name, phone, password } = req.body;
+
+  const token = jwt.sign(
+    {
+      expiresIn: "365d",
+    },
+    TOKEN
+  );
+
+  if (!email || !password) {
+    return res
+      .status(403)
+      .json({ message: "Email, name, phone and password values are required" });
+  }
+
+  if (email === "admin@admin.com" && password === "123456") {
+    return res.status(200).json({
+      name: name,
+      email: email,
+      token,
+      phone: "+55 21 99999-9999",
+      picture:
+        "https://igd-wp-uploads-pluginaws.s3.amazonaws.com/wp-content/uploads/2016/05/30105213/Qual-e%CC%81-o-Perfil-do-Empreendedor.jpg",
+    });
+  }
+
+  return res.status(400).json({ message: "Invalid email or password" });
+});
+
 server.get("/activities", authorization, async (req, res) => {
   const activities = [
     {
