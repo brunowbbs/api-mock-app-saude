@@ -100,7 +100,7 @@ server.get("/activities", authorization, async (req, res) => {
     {
       id: 2,
       title: "Google Drive",
-      description: "Yesterday",
+      description: "Ontem",
     },
     {
       id: 3,
@@ -148,47 +148,47 @@ server.get("/favorites", authorization, async (req, res) => {
     {
       id: 1,
       title: "Prontuários",
-      icon: "",
+      icon: "folder",
     },
     {
       id: 2,
       title: "Exames",
-      icon: "",
+      icon: "folder",
     },
     {
       id: 3,
       title: "Histórico",
-      icon: "",
+      icon: "folder",
     },
     {
       id: 4,
       title: "Prontuários",
-      icon: "",
+      icon: "folder",
     },
     {
       id: 5,
       title: "Exames",
-      icon: "",
+      icon: "folder",
     },
     {
       id: 6,
       title: "Histórico",
-      icon: "",
+      icon: "folder",
     },
     {
       id: 7,
       title: "Histórico",
-      icon: "",
+      icon: "folder",
     },
     {
       id: 8,
       title: "Histórico",
-      icon: "",
+      icon: "folder",
     },
     {
       id: 9,
       title: "Histórico",
-      icon: "",
+      icon: "folder",
     },
   ];
 
